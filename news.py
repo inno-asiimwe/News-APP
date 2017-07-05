@@ -5,15 +5,18 @@ def head_lines(source):
     data = {'source': source, 'apikey':'47c95d8398ab44a4b364a7e9463dc4a3'}
     news = requests.get('https://newsapi.org/v1/articles', params = data)
 
-    news_json = news.json()
+    if news.status_code == 200:
 
-    articles = news_json['articles']
+        news_json = news.json()
+        articles = news_json['articles']
 
-    for article in articles:
-        print(article['title'])
-        print(article['description'])
-        print(article['url'])
-        print('')
+        for article in articles:
+            print(article['title'])
+            print(article['description'])
+            print(article['url'])
+            print('')
+    else:
+        print("We are having trouble processing your request, please check your input and try again")
 
 
 def main():
