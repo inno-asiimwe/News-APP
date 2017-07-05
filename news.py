@@ -15,8 +15,10 @@ def head_lines(source):
             print(article['description'])
             print(article['url'])
             print('')
+        main()    
     else:
         print("We are having trouble processing your request, please check your input and try again")
+        main()
 
 
 def main():
@@ -32,7 +34,15 @@ def main():
     print('')
     
     site = str(input("What is your option for today?: "))
-    head_lines(site)
+    if site in ['bbc-news', 'bbc-sport', 'cnn', 'techcrunch', 'daily-mail']:
+        
+        print('')
+        head_lines(site)
+    else:
+        print("Wrong input,Please follow the instructions provided")
+        print("There are no qoutes or spaces!")
+        print("Thank you")
+        main()
 
 
 
