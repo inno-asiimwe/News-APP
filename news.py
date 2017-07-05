@@ -21,8 +21,17 @@ def head_lines(source):
 
 def main():
     """A function that interacts with the users of the news app, it is an entry point for the application"""
+
+    print('')
+    print("Welcome to My News App ")
+    print("For BBC News enter bbc-news")
+    print("For BBC Sport enter bbc-sport")
+    print("For CNN News enter cnn")
+    print("For TechCrunch News enter techcrunch")
+    print("For Daily Mail News enter daily-mail")
+    print('')
     
-    site = str(input("What is your option for today?"))
+    site = str(input("What is your option for today?: "))
     head_lines(site)
 
 
