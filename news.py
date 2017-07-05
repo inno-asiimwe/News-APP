@@ -20,8 +20,10 @@ def head_lines(source):
 
 
 def main():
-    """A function that interacts with the users of the news app, it is an entry point for the applicationn"""
-    pass
+    """A function that interacts with the users of the news app, it is an entry point for the application"""
+    
+    site = str(input("What is your option for today?"))
+    head_lines(site)
 
 
 
